@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="claude-cybersecurity: AI-Powered Code Security Audit" width="100%">
+  <img src="assets/banner.webp" alt="claude-cybersecurity: AI-Powered Code Security Audit" width="100%">
 </p>
 
 <p align="center">
