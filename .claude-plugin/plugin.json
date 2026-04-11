@@ -1,0 +1,8 @@
+{
+  "name": "claude-cybersecurity",
+  "version": "1.0.0",
+  "description": "AI-powered cybersecurity code review with 8 specialist agents, OWASP 2025, CWE Top 25, MITRE ATT&CK, and framework-aware false-positive suppression",
+  "author": "AgriciDaniel",
+  "license": "MIT",
+  "homepage": "https://github.com/AgriciDaniel/claude-cybersecurity"
+}
