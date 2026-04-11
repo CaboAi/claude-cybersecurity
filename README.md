@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.webp" alt="claude-cybersecurity: AI-Powered Code Security Audit" width="100%">
+  <img src="assets/banner.svg" alt="claude-cybersecurity: AI-Powered Code Security Audit" width="100%">
 </p>
 
 <p align="center">
@@ -62,16 +62,9 @@ irm https://raw.githubusercontent.com/AgriciDaniel/claude-cybersecurity/main/ins
 
 ## What It Does
 
-| Agent | Weight | Focus |
-|-------|--------|-------|
-| Vulnerability Scanner | 20% | OWASP Top 10:2025 + CWE Top 25:2024, taint analysis, injection patterns |
-| Authorization Reviewer | 15% | Auth bypass, IDOR, privilege escalation, session management |
-| Threat Intelligence | 15% | Malware indicators, backdoors, C2 communication, MITRE ATT&CK mapping |
-| Secret Scanner | 10% | Semantic detection, split/obfuscated credentials, .env exposure |
-| Dependency Auditor | 10% | Supply chain, slopsquatting, typosquatting, behavioral analysis |
-| IaC Scanner | 10% | Terraform, Docker, Kubernetes, GitHub Actions misconfigurations |
-| AI Code Auditor | 10% | AI-generated code patterns (missing validation, hallucinated deps) |
-| Logic Reviewer | 10% | Business logic flaws, race conditions, TOCTOU, attack-path chaining |
+<p align="center">
+  <img src="assets/agents-chart.svg" alt="8 Specialist Agents" width="100%">
+</p>
 
 ## Key Differentiators vs GitHub Advanced Security
 
@@ -90,55 +83,21 @@ irm https://raw.githubusercontent.com/AgriciDaniel/claude-cybersecurity/main/ins
 
 ## Coverage
 
-### Standards
-- OWASP Top 10:2025 (all 10 categories including new A03 Supply Chain + A10 Exceptional Conditions)
-- CWE Top 25:2024 (25 dedicated detection sections)
-- OWASP API Security Top 10:2023
-- MITRE ATT&CK v15 (7 techniques: T1059, T1027, T1071, T1195, T1005, T1041, T1496)
-
-### Languages (11 pattern files)
-Python, JavaScript/TypeScript, Java, Go, Rust, C/C++, Ruby, PHP, C#/.NET, Swift/Kotlin, Shell/Bash
-
-### IaC Platforms
-Terraform (AWS/GCP/Azure), Dockerfile, Kubernetes YAML, GitHub Actions workflows
-
-### Compliance Frameworks
-PCI DSS 4.0, HIPAA, SOC 2, GDPR, NIST SP 800-53
+<p align="center">
+  <img src="assets/coverage.svg" alt="Coverage at a Glance" width="100%">
+</p>
 
 ## Scoring System
 
-```
-Finding Score = Base Severity (CVSS-aligned, 0-100)
-              x Confidence Multiplier (0.3-1.0)
-              x Exploitability Factor (0.5-1.0)
-              +/- Context Adjustment (-20 to +20)
-```
-
-| Grade | Score | Meaning |
-|-------|-------|---------|
-| A | 90-100 | Excellent security posture |
-| B | 75-89 | Good with minor issues |
-| C | 50-74 | Needs significant improvement |
-| D | 25-49 | Serious security concerns |
-| F | 0-24 | Critical — immediate action required |
+<p align="center">
+  <img src="assets/scoring.svg" alt="Scoring System" width="100%">
+</p>
 
 ## Architecture
 
-```
-/cybersecurity [path] [--scope full|quick|diff] [--compliance pci|hipaa|soc2|gdpr]
-    |
-    v
- GATHER: Detect stack, enumerate entry points, map trust boundaries
-    |
-    v
- ANALYZE: 8 parallel specialist agents (single dispatch)
-    |
-    v
- RECOMMEND: Weighted aggregation, attack-path chaining, compliance mapping
-    |
-    v
- EXECUTE: Structured report with prioritized remediation
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="GARE Architecture" width="100%">
+</p>
 
 ## File Structure
 
