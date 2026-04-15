@@ -15,6 +15,14 @@ desktop.ini
 .env.*
 !.env.example
 
+# Certificates and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.crt
+
 # Python
 __pycache__/
 *.pyc

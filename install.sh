@@ -15,10 +15,20 @@ mkdir -p "$SKILL_DIR/references/iac-patterns"
 TEMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TEMP_DIR"' EXIT
 
-git clone --depth 1 "$REPO_URL.git" "$TEMP_DIR" 2>/dev/null || {
+git clone --depth 1 "$REPO_URL.git" "$TEMP_DIR" || {
     echo "Error: Could not clone repository. Check your internet connection."
     exit 1
 }
+
+# Verify integrity
+if [ -f "$TEMP_DIR/checksums.sha256" ]; then
+    echo "Verifying file integrity..."
+    (cd "$TEMP_DIR" && sha256sum -c checksums.sha256 --quiet) || {
+        echo "Error: Integrity check failed! Files may have been tampered with."
+        echo "Please report this at: https://github.com/AgriciDaniel/claude-cybersecurity/security/advisories/new"
+        exit 1
+    }
+fi
 
 # Copy skill files
 cp "$TEMP_DIR/skills/$SKILL_NAME/SKILL.md" "$SKILL_DIR/"

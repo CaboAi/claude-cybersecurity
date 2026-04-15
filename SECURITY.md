@@ -18,7 +18,7 @@ Instead, use the [GitHub Security Advisory](https://github.com/AgriciDaniel/clau
 
 This policy covers:
 - The skill's SKILL.md instructions and reference files
-- Installation scripts (install.sh, install.ps1)
+- Installation scripts (install.sh)
 - Any CI/CD workflow files
 - Detection pattern accuracy (false negatives that could give false confidence)
 

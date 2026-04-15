@@ -7,27 +7,21 @@
   <img src="https://img.shields.io/badge/claude--code-skill-blueviolet" alt="Claude Code Skill">
   <img src="https://img.shields.io/badge/agents-8-00ff88" alt="8 Specialist Agents">
   <img src="https://img.shields.io/badge/CWE%20Top%2025-100%25-red" alt="CWE Top 25 Coverage">
-  <img src="https://img.shields.io/badge/OWASP-2025-orange" alt="OWASP 2025">
-  <img src="https://img.shields.io/badge/languages-11-blue" alt="11 Languages">
+  <img src="https://img.shields.io/badge/OWASP-2021-orange" alt="OWASP 2021">
+  <img src="https://img.shields.io/badge/languages-14-blue" alt="14 Languages">
 </p>
 
 ---
 
 **The most comprehensive AI-powered cybersecurity code review skill for Claude Code.** Spawns 8 parallel specialist agents to audit your codebase across vulnerability detection, authorization verification, secret scanning, supply chain analysis, IaC security, threat intelligence (malware/C2/backdoor detection), AI-generated code patterns, and business logic flaws.
 
-**Surpasses GitHub Advanced Security** by detecting what static tools architecturally cannot: missing security controls, business logic flaws, attack-path chaining, and obfuscated secrets — with zero configuration.
+**Complements GitHub Advanced Security** by detecting what static tools architecturally cannot: missing security controls, business logic flaws, attack-path chaining, and obfuscated secrets — with zero configuration.
 
 ---
 
 ## Installation
 
-### One-liner (recommended)
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-cybersecurity/main/install.sh | bash
-```
-
-### Manual
+### Manual (recommended)
 
 ```bash
 git clone https://github.com/AgriciDaniel/claude-cybersecurity.git
@@ -35,10 +29,16 @@ cd claude-cybersecurity
 bash install.sh
 ```
 
-### Windows (PowerShell)
+### Plugin (Claude Code native)
 
-```powershell
-irm https://raw.githubusercontent.com/AgriciDaniel/claude-cybersecurity/main/install.ps1 | iex
+```bash
+claude plugin install cybersecurity
+```
+
+### One-liner (convenience)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-cybersecurity/main/install.sh | bash
 ```
 
 ## Demo
@@ -79,10 +79,10 @@ https://youtu.be/aE295lLPO5A
 | Business logic flaw detection | No | Yes |
 | Authorization enforcement verification | Basic | Context-aware |
 | Race condition detection | Very limited | Concurrency pattern analysis |
-| Languages supported | 12 | 16+ (any language) |
+| Languages supported | 12 | 14 (pattern-based) + broader reasoning via LLM |
 | IaC/Container/CI-CD scanning | No | Terraform, Docker, K8s, Actions |
 | AI-generated code security | No | Specialized detection |
-| Obfuscated secret detection (84.4% recall) | Regex only | Semantic understanding |
+| Obfuscated secret detection | Regex only | Semantic context analysis |
 | Threat intelligence (malware/C2) | No | MITRE ATT&CK mapped |
 | Framework-aware false-positive suppression | No | 10 frameworks |
 | Cost | $49/committer/month | Free (with Claude Code) |
@@ -109,7 +109,7 @@ https://youtu.be/aE295lLPO5A
 
 ```
 skills/cybersecurity/
-├── SKILL.md                              (900 lines — orchestrator)
+├── SKILL.md                              (~990 lines — orchestrator)
 ├── references/
 │   ├── vulnerability-taxonomy.md         (25 CWE categories)
 │   ├── scoring-rubric.md                 (formula + confidence system)
